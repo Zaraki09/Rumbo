@@ -1,0 +1,396 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Rumbo Viajes: destinos y experiencias para planificar tu próxima escapada."
+    />
+    <title>Rumbo · Viajes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260908-10" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#inicio" aria-label="Rumbo, inicio"
+        >RUMBO<span>·</span></a
+      >
+      <button
+        id="menuBtn"
+        class="menu-btn"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        ☰
+      </button>
+      <nav id="menu" aria-label="Navegación principal">
+        <a href="#destinos">Destinos</a><a href="#experiencias">Experiencias</a
+        ><a href="#favoritos"
+          >Favoritos
+          <span id="favoritesCount" class="count" aria-label="0 favoritos"
+            >0</span
+          ></a
+        ><a href="contacto.html" class="navbtn">Planifica tu viaje ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-text">
+          <p class="tag">GUÍA DE VIAJES · 2026</p>
+          <h1>El mundo<br />te está <i>esperando.</i></h1>
+          <p>
+            Encuentra esos lugares que se quedan contigo mucho después de
+            volver.
+          </p>
+          <a class="button dark" href="#destinos">Descubrir destinos ↓</a>
+        </div>
+        <div class="hero-art" aria-label="Collage de destinos Rumbo">
+          <a
+            class="hero-photo photo-maldivas"
+            href="destino.html?lugar=maldivas"
+            aria-label="Descubrir Maldivas"
+          >
+            <img src="assets/maldivas.png" alt="Laguna turquesa en Maldivas" />
+            <span>Maldivas</span>
+          </a>
+          <a
+            class="hero-photo photo-kioto"
+            href="destino.html?lugar=kioto"
+            aria-label="Descubrir Kioto"
+          >
+            <img src="assets/kioto.png" alt="Paisaje de otoño en Kioto" />
+            <span>Kioto</span>
+          </a>
+          <a
+            class="hero-photo photo-dolomitas"
+            href="destino.html?lugar=dolomitas"
+            aria-label="Descubrir Dolomitas"
+          >
+            <img src="assets/dolomitas.png" alt="Montañas de los Dolomitas" />
+            <span>Dolomitas</span>
+          </a>
+          <a
+            class="hero-photo photo-marrakech"
+            href="destino.html?lugar=marrakech"
+            aria-label="Descubrir Marrakech"
+          >
+            <img
+              src="assets/marrakech.png"
+              alt="Arquitectura y colores de Marrakech"
+            />
+            <span>Marrakech</span>
+          </a>
+          <a
+            class="hero-photo photo-amalfi"
+            href="destino.html?lugar=amalfi"
+            aria-label="Descubrir Amalfi"
+          >
+            <img
+              src="assets/amalfi.png"
+              alt="Costa de Amalfi junto al Mediterráneo"
+            />
+            <span>Amalfi</span>
+          </a>
+        </div>
+      </section>
+      <section id="destinos" aria-labelledby="destinos-title">
+        <div class="heading">
+          <div>
+            <p class="tag">01 / DESTINOS ESENCIALES</p>
+            <h2 id="destinos-title">Elige tu <i>horizonte.</i></h2>
+          </div>
+          <p>
+            Una selección para perderse, descubrir y volver siendo otra persona.
+          </p>
+        </div>
+        <div class="destination-tools">
+          <label class="search"
+            ><span class="sr-only">Buscar destinos</span
+            ><input
+              id="destinationSearch"
+              type="search"
+              placeholder="Busca por destino, país o categoría"
+              autocomplete="off"
+            /><span aria-hidden="true">⌕</span></label
+          >
+          <div id="filters" class="filters" aria-label="Filtrar destinos">
+            <button class="active" data-filter="all">Todos</button
+            ><button data-filter="españa">España</button
+            ><button data-filter="europa">Europa</button
+            ><button data-filter="asia">Asia</button
+            ><button data-filter="américa">América</button>
+          </div>
+        </div>
+        <p id="resultsStatus" class="results-status" aria-live="polite"></p>
+        <div
+          id="destinationsGrid"
+          class="destinations-grid original-destinations"
+        >
+          <article
+            class="destination-card card maldivas big"
+            data-id="maldivas"
+            data-category="asia"
+          >
+            <button
+              class="favorite-button"
+              type="button"
+              data-favorite="maldivas"
+              aria-label="Añadir Maldivas a favoritos"
+              aria-pressed="false"
+            >
+              ♥
+            </button>
+            <small>01 — ASIA · MALDIVAS</small>
+            <h3>Maldivas</h3>
+            <p>Atolones de coral y aguas cristalinas</p>
+            <a class="button" href="destino.html?lugar=maldivas"
+              >Explorar guía →</a
+            >
+          </article>
+          <article
+            class="destination-card card kioto"
+            data-id="kioto"
+            data-category="asia"
+          >
+            <button
+              class="favorite-button"
+              type="button"
+              data-favorite="kioto"
+              aria-label="Añadir Kioto a favoritos"
+              aria-pressed="false"
+            >
+              ♥
+            </button>
+            <small>02 — ASIA · JAPÓN</small>
+            <h3>Kioto</h3>
+            <p>Templos, jardines y tradición</p>
+            <a class="button" href="destino.html?lugar=kioto"
+              >Explorar guía →</a
+            >
+          </article>
+          <article
+            class="destination-card card dolomitas"
+            data-id="dolomitas"
+            data-category="europa"
+          >
+            <button
+              class="favorite-button"
+              type="button"
+              data-favorite="dolomitas"
+              aria-label="Añadir Dolomitas a favoritos"
+              aria-pressed="false"
+            >
+              ♥
+            </button>
+            <small>03 — EUROPA · ITALIA</small>
+            <h3>Dolomitas</h3>
+            <p>Montañas, lagos y senderos</p>
+            <a class="button" href="destino.html?lugar=dolomitas"
+              >Explorar guía →</a
+            >
+          </article>
+          <article
+            class="destination-card card marrakech"
+            data-id="marrakech"
+            data-category="europa"
+          >
+            <button
+              class="favorite-button"
+              type="button"
+              data-favorite="marrakech"
+              aria-label="Añadir Marrakech a favoritos"
+              aria-pressed="false"
+            >
+              ♥
+            </button>
+            <small>04 — EUROPA · MARRUECOS</small>
+            <h3>Marrakech</h3>
+            <p>Color, historia y sabores</p>
+            <a class="button" href="destino.html?lugar=marrakech"
+              >Explorar guía →</a
+            >
+          </article>
+          <article
+            class="destination-card card amalfi"
+            data-id="amalfi"
+            data-category="europa"
+          >
+            <button
+              class="favorite-button"
+              type="button"
+              data-favorite="amalfi"
+              aria-label="Añadir Amalfi a favoritos"
+              aria-pressed="false"
+            >
+              ♥
+            </button>
+            <small>05 — EUROPA · ITALIA</small>
+            <h3>Amalfi</h3>
+            <p>Costa, pueblos y Mediterráneo</p>
+            <a class="button" href="destino.html?lugar=amalfi"
+              >Explorar guía →</a
+            >
+          </article>
+        </div>
+        <p id="noResults" class="no-results" hidden>
+          No hemos encontrado destinos con esa búsqueda. Prueba con otro
+          término.
+        </p>
+      </section>
+      <section
+        id="favoritos"
+        class="favorites-section"
+        aria-labelledby="favorites-title"
+      >
+        <div class="heading">
+          <div>
+            <p class="tag">TU LISTA</p>
+            <h2 id="favorites-title">Mis <i>favoritos.</i></h2>
+          </div>
+          <p>
+            Guarda los lugares que quieres descubrir y vuelve a ellos cuando
+            quieras.
+          </p>
+        </div>
+        <div id="favoritesGrid" class="destinations-grid favorites-grid"></div>
+        <p id="emptyFavorites" class="empty-state">
+          Todavía no tienes destinos guardados. Pulsa el corazón de cualquier
+          destino para añadirlo.
+        </p>
+      </section>
+      <section class="experience" id="experiencias">
+        <div
+          class="experience-img"
+          role="img"
+          aria-label="Paisaje de montaña"
+        ></div>
+        <div>
+          <p class="tag">02 / VIAJAR A TU MANERA</p>
+          <h2>No hay una sola forma de <i>irse.</i></h2>
+          <p>
+            Quizá buscas una hamaca frente al mar. O un tren al amanecer. O una
+            mesa llena de sabores que no sabes nombrar todavía.
+          </p>
+          <ol>
+            <li>Descanso sin prisa</li>
+            <li>Aventura al aire libre</li>
+            <li>Ciudades con historia</li>
+          </ol>
+          <a href="contacto.html">Encuentra tu estilo →</a>
+        </div>
+      </section>
+      <section class="contact" id="contacto">
+        <div>
+          <p class="tag">¿EMPEZAMOS?</p>
+          <h2>Tu próximo<br /><i>capítulo</i> empieza aquí.</h2>
+        </div>
+        <div>
+          <p>
+            Cuéntanos qué imaginas y te ayudaremos a encontrar la inspiración
+            adecuada.
+          </p>
+          <a class="button light" href="contacto.html">Hablar con Rumbo →</a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <a class="logo" href="#inicio">RUMBO<span>·</span></a>
+        <p>
+          Viajar es coleccionar momentos, no cosas. Inspiración para salir con
+          más calma y descubrir más lejos.
+        </p>
+        <a class="footer-contact-cta" href="contacto.html"
+          >Planifica tu viaje <span aria-hidden="true">→</span></a
+        >
+      </div>
+      <nav class="footer-column" aria-label="Explorar Rumbo">
+        <h2>Explora</h2>
+        <a href="#destinos">Destinos</a>
+        <a href="#experiencias">Experiencias</a>
+        <a href="#favoritos">Mis favoritos</a>
+      </nav>
+      <nav class="footer-column" aria-label="Ayuda">
+        <h2>Hablemos</h2>
+        <a href="contacto.html">Contacto</a>
+        <a href="contacto.html">Diseña tu viaje</a>
+      </nav>
+      <nav class="footer-column" aria-label="Información legal">
+        <h2>Información</h2>
+        <a href="politica-privacidad.html">Política de privacidad</a>
+        <a href="terminos-condiciones.html">Términos y condiciones</a>
+        <button id="cookieSettings" class="text-button">
+          Configuración de cookies
+        </button>
+      </nav>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> RUMBO. Todos los derechos reservados.</p>
+        <p>Hecho para viajar sin prisa.</p>
+      </div>
+    </footer>
+    <div
+      id="cookieBanner"
+      class="cookie-banner"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cookieTitle"
+      hidden
+    >
+      <div>
+        <p class="tag">TU PRIVACIDAD</p>
+        <h2 id="cookieTitle">Usamos cookies</h2>
+        <p>
+          Utilizamos cookies necesarias para que la web funcione y, con tu
+          permiso, para mejorar tu experiencia. Consulta nuestra
+          <a href="politica-privacidad.html">Política de privacidad</a>.
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button id="cookieConfigure" class="button outline">Configurar</button
+        ><button id="cookieReject" class="button outline">Rechazar</button
+        ><button id="cookieAccept" class="button dark">Aceptar</button>
+      </div>
+    </div>
+    <div
+      id="cookieModal"
+      class="cookie-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cookieModalTitle"
+      hidden
+    >
+      <div class="modal-card">
+        <button id="closeCookieModal" class="close-modal" aria-label="Cerrar">
+          ×
+        </button>
+        <p class="tag">PREFERENCIAS</p>
+        <h2 id="cookieModalTitle">Configura tus cookies</h2>
+        <p>
+          Las cookies necesarias permiten el funcionamiento básico de la web y
+          no se pueden desactivar.
+        </p>
+        <label class="cookie-option"
+          ><span
+            ><b>Necesarias</b
+            ><small>Funcionamiento, seguridad y preferencias.</small></span
+          ><input type="checkbox" checked disabled /></label
+        ><label class="cookie-option"
+          ><span
+            ><b>Analíticas</b
+            ><small>Nos ayudan a entender cómo se utiliza la web.</small></span
+          ><input id="analyticsCookies" type="checkbox" /></label
+        ><button id="saveCookieSettings" class="button dark">
+          Guardar preferencias
+        </button>
+      </div>
+    </div>
+    <script src="script.js?v=20260908-6"></script>
+  </body>
+</html>

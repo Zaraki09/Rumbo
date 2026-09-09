@@ -1,0 +1,27 @@
+# RUMBO · web de viajes
+
+Sitio estático hecho con HTML, CSS y JavaScript. No necesita hosting ni base de datos para verse.
+
+## Compartirla por la misma Wi-Fi
+
+1. Abre PowerShell dentro de esta carpeta (`D:\MARIO`).
+2. Ejecuta:
+
+   ```powershell
+   py -m http.server 8000
+   ```
+
+   Si `py` no funciona y tienes Python instalado, prueba `python -m http.server 8000`.
+
+3. Obtén la IP local de tu PC:
+
+   ```powershell
+   ipconfig
+   ```
+
+   Busca la dirección IPv4 del adaptador Wi-Fi, por ejemplo `192.168.1.35`.
+4. Tus compañeros abren en el navegador: `http://192.168.1.35:8000`
+
+Mantén abierta la ventana de PowerShell mientras compartes la página. Si Windows pregunta por el firewall, permite el acceso en **redes privadas**. Todos los dispositivos deben estar en la misma Wi-Fi y esa red no debe tener activado el aislamiento de clientes.
+
+Para detener el servidor, pulsa `Ctrl + C` en PowerShell.

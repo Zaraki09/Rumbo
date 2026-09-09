@@ -1,0 +1,153 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Política de privacidad de Rumbo Viajes."
+    />
+    <title>Política de privacidad · Rumbo Viajes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260908-5" />
+    <style>
+      .legal {
+        max-width: 850px;
+        margin: auto;
+        padding: 82px 6vw;
+      }
+      .legal h1 {
+        font-size: clamp(45px, 7vw, 78px);
+        line-height: 1;
+        margin: 0 0 28px;
+        letter-spacing: -0.05em;
+      }
+      .legal h2 {
+        font-size: 28px;
+        margin: 45px 0 12px;
+      }
+      .legal p,
+      .legal li {
+        line-height: 1.7;
+        color: var(--muted);
+      }
+      .legal a {
+        color: var(--orange);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">RUMBO<span>·</span></a
+      ><button
+        id="menuBtn"
+        class="menu-btn"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        ☰
+      </button>
+      <nav id="menu">
+        <a href="index.html#destinos">Destinos</a
+        ><a href="index.html#experiencias">Experiencias</a
+        ><a href="index.html#favoritos">Favoritos</a
+        ><a class="navbtn" href="contacto.html">Planifica tu viaje ↗</a>
+      </nav>
+    </header>
+    <main class="legal">
+      <p class="tag">INFORMACIÓN LEGAL</p>
+      <h1>Política de <i>privacidad.</i></h1>
+      <p>Última actualización: 8 de septiembre de 2026.</p>
+      <h2>Responsable del tratamiento</h2>
+      <p>
+        Rumbo Viajes es responsable del tratamiento de los datos personales
+        facilitados a través de esta web. Para cualquier consulta puedes
+        escribirnos mediante nuestro
+        <a href="contacto.html">formulario de contacto</a>.
+      </p>
+      <h2>Datos que recogemos</h2>
+      <p>
+        Podemos tratar los datos que nos facilitas al contactar con nosotros,
+        como nombre, email, asunto y contenido del mensaje. También guardamos en
+        tu navegador las preferencias de cookies y tus destinos favoritos.
+      </p>
+      <h2>Finalidad y base jurídica</h2>
+      <p>
+        Utilizamos tus datos para responder a tus consultas y mejorar la
+        experiencia de navegación. El envío de un formulario se basa en tu
+        consentimiento; las cookies opcionales se activan únicamente cuando las
+        aceptas.
+      </p>
+      <h2>Conservación y destinatarios</h2>
+      <p>
+        Los datos se conservarán durante el tiempo necesario para atender la
+        consulta. No vendemos datos personales ni los cedemos a terceros, salvo
+        obligación legal.
+      </p>
+      <h2>Tus derechos</h2>
+      <p>
+        Puedes solicitar acceso, rectificación, supresión, limitación u
+        oposición al tratamiento de tus datos, así como retirar tu
+        consentimiento, mediante nuestro formulario de contacto. También puedes
+        presentar una reclamación ante la Agencia Española de Protección de
+        Datos.
+      </p>
+      <h2>Cookies</h2>
+      <p>
+        La web utiliza almacenamiento local para recordar tus preferencias.
+        Puedes cambiar tu decisión desde “Configuración de cookies” en el pie de
+        la página de inicio.
+      </p>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">RUMBO<span>·</span></a>
+        <p>
+          Viajar es coleccionar momentos, no cosas. Inspiración para salir con
+          más calma y descubrir más lejos.
+        </p>
+        <a class="footer-contact-cta" href="contacto.html"
+          >Planifica tu viaje <span aria-hidden="true">→</span></a
+        >
+      </div>
+      <nav class="footer-column" aria-label="Explorar Rumbo">
+        <h2>Explora</h2>
+        <a href="index.html#destinos">Destinos</a>
+        <a href="index.html#experiencias">Experiencias</a>
+        <a href="index.html#favoritos">Mis favoritos</a>
+      </nav>
+      <nav class="footer-column" aria-label="Ayuda">
+        <h2>Hablemos</h2>
+        <a href="contacto.html">Contacto</a>
+        <a href="contacto.html">Diseña tu viaje</a>
+      </nav>
+      <nav class="footer-column" aria-label="Información legal">
+        <h2>Información</h2>
+        <a href="politica-privacidad.html">Política de privacidad</a>
+        <a href="terminos-condiciones.html">Términos y condiciones</a>
+        <button id="cookieSettings" class="text-button">
+          Configuración de cookies
+        </button>
+      </nav>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> RUMBO. Todos los derechos reservados.</p>
+        <p>Hecho para viajar sin prisa.</p>
+      </div>
+    </footer>
+    <script>
+      const b = document.querySelector("#menuBtn"),
+        n = document.querySelector("#menu");
+      b.onclick = () => {
+        let o = n.classList.toggle("open");
+        b.setAttribute("aria-expanded", o);
+      };
+      document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Guía de destino de Rumbo Viajes." />
+    <title>Guía de destino · RUMBO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="destination.css?v=20260908-5" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">RUMBO<span>·</span></a
+      ><a class="back" href="index.html#destinos">← Volver a destinos</a>
+    </header>
+    <main>
+      <section class="guide-hero" id="hero">
+        <div>
+          <p id="country" class="tag"></p>
+          <h1 id="name"></h1>
+          <p id="intro"></p>
+          <a href="#visitas" class="button">Descubre la guía ↓</a>
+        </div>
+      </section>
+      <section class="facts">
+        <div><span>MEJOR ÉPOCA</span><b id="season"></b></div>
+        <div><span>DURACIÓN IDEAL</span><b id="duration"></b></div>
+        <div><span>ESTILO</span><b id="style"></b></div>
+      </section>
+      <section class="content" id="visitas">
+        <p class="tag">LUGARES IMPRESCINDIBLES</p>
+        <h2>Lo que no te<br /><i>puedes perder.</i></h2>
+        <div class="places" id="places"></div>
+      </section>
+      <section class="tip">
+        <p class="tag">CONSEJO RUMBO</p>
+        <p id="tip"></p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">RUMBO<span>·</span></a>
+        <p>
+          Viajar es coleccionar momentos, no cosas. Inspiración para salir con
+          más calma y descubrir más lejos.
+        </p>
+        <a class="footer-contact-cta" href="contacto.html"
+          >Planifica tu viaje <span aria-hidden="true">→</span></a
+        >
+      </div>
+      <nav class="footer-column" aria-label="Explorar Rumbo">
+        <h2>Explora</h2>
+        <a href="index.html#destinos">Destinos</a>
+        <a href="index.html#experiencias">Experiencias</a>
+        <a href="index.html#favoritos">Mis favoritos</a>
+      </nav>
+      <nav class="footer-column" aria-label="Ayuda">
+        <h2>Hablemos</h2>
+        <a href="contacto.html">Contacto</a>
+        <a href="contacto.html">Diseña tu viaje</a>
+      </nav>
+      <nav class="footer-column" aria-label="Información legal">
+        <h2>Información</h2>
+        <a href="politica-privacidad.html">Política de privacidad</a>
+        <a href="terminos-condiciones.html">Términos y condiciones</a>
+        <button id="cookieSettings" class="text-button">
+          Configuración de cookies
+        </button>
+      </nav>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> RUMBO. Todos los derechos reservados.</p>
+        <p>Hecho para viajar sin prisa.</p>
+      </div>
+    </footer>
+    <script src="destination.js"></script>
+  </body>
+</html>

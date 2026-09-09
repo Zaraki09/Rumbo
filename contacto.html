@@ -1,0 +1,186 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Contacta con Rumbo Viajes para planificar tu próxima experiencia."
+    />
+    <title>Contacto · Rumbo Viajes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260908-5" />
+    <style>
+      .page-main {
+        max-width: 850px;
+        margin: auto;
+        padding: 85px 6vw;
+      }
+      .page-main h1 {
+        font-size: clamp(48px, 7vw, 80px);
+        margin: 0 0 22px;
+        letter-spacing: -0.05em;
+      }
+      .page-intro {
+        color: var(--muted);
+        line-height: 1.7;
+        max-width: 620px;
+      }
+      .contact-form {
+        display: grid;
+        gap: 20px;
+        margin-top: 42px;
+        padding: 32px;
+        background: #eee9df;
+      }
+      .contact-form label {
+        display: grid;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        border: 1px solid #c9c6bf;
+        background: var(--cream);
+        padding: 12px;
+        resize: vertical;
+      }
+      .form-message {
+        min-height: 20px;
+        margin: 0;
+        font-size: 13px;
+      }
+      .form-message.error {
+        color: #a12f17;
+      }
+      .form-message.success {
+        color: #27664f;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">RUMBO<span>·</span></a
+      ><button
+        id="menuBtn"
+        class="menu-btn"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        ☰
+      </button>
+      <nav id="menu">
+        <a href="index.html#destinos">Destinos</a
+        ><a href="index.html#experiencias">Experiencias</a
+        ><a href="index.html#favoritos">Favoritos</a
+        ><a class="navbtn" href="contacto.html">Planifica tu viaje ↗</a>
+      </nav>
+    </header>
+    <main class="page-main">
+      <p class="tag">CONTACTO</p>
+      <h1>Hablemos de tu <i>próximo viaje.</i></h1>
+      <p class="page-intro">
+        Cuéntanos qué tienes en mente. Te responderemos con ideas para empezar a
+        darle forma a tu próxima escapada.
+      </p>
+      <form id="contactForm" class="contact-form" novalidate>
+        <label
+          >Nombre<input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required /></label
+        ><label
+          >Email<input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required /></label
+        ><label
+          >Asunto<input
+            id="subject"
+            name="subject"
+            type="text"
+            required /></label
+        ><label
+          >Mensaje<textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+          ></textarea></label
+        ><button class="button dark" type="submit">Enviar mensaje →</button>
+        <p id="formMessage" class="form-message" aria-live="polite"></p>
+      </form>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">RUMBO<span>·</span></a>
+        <p>
+          Viajar es coleccionar momentos, no cosas. Inspiración para salir con
+          más calma y descubrir más lejos.
+        </p>
+        <a class="footer-contact-cta" href="contacto.html"
+          >Planifica tu viaje <span aria-hidden="true">→</span></a
+        >
+      </div>
+      <nav class="footer-column" aria-label="Explorar Rumbo">
+        <h2>Explora</h2>
+        <a href="index.html#destinos">Destinos</a>
+        <a href="index.html#experiencias">Experiencias</a>
+        <a href="index.html#favoritos">Mis favoritos</a>
+      </nav>
+      <nav class="footer-column" aria-label="Ayuda">
+        <h2>Hablemos</h2>
+        <a href="contacto.html">Contacto</a>
+        <a href="contacto.html">Diseña tu viaje</a>
+      </nav>
+      <nav class="footer-column" aria-label="Información legal">
+        <h2>Información</h2>
+        <a href="politica-privacidad.html">Política de privacidad</a>
+        <a href="terminos-condiciones.html">Términos y condiciones</a>
+        <button id="cookieSettings" class="text-button">
+          Configuración de cookies
+        </button>
+      </nav>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> RUMBO. Todos los derechos reservados.</p>
+        <p>Hecho para viajar sin prisa.</p>
+      </div>
+    </footer>
+    <script>
+      const b = document.querySelector("#menuBtn"),
+        n = document.querySelector("#menu");
+      b.onclick = () => {
+        let o = n.classList.toggle("open");
+        b.setAttribute("aria-expanded", o);
+      };
+      document.querySelector("#year").textContent = new Date().getFullYear();
+      document.querySelector("#contactForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const f = e.currentTarget,
+          m = document.querySelector("#formMessage");
+        if (!f.checkValidity()) {
+          m.textContent =
+            "Revisa los campos obligatorios e introduce un email válido.";
+          m.className = "form-message error";
+          f.reportValidity();
+          return;
+        }
+        m.textContent =
+          "¡Gracias! Hemos recibido tu mensaje y te responderemos pronto.";
+        m.className = "form-message success";
+        f.reset();
+      });
+    </script>
+  </body>
+</html>

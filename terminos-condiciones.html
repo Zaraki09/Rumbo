@@ -1,0 +1,156 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Términos y condiciones de uso de Rumbo Viajes."
+    />
+    <title>Términos y condiciones · Rumbo Viajes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260908-5" />
+    <style>
+      .legal {
+        max-width: 850px;
+        margin: auto;
+        padding: 82px 6vw;
+      }
+      .legal h1 {
+        font-size: clamp(45px, 7vw, 78px);
+        line-height: 1;
+        margin: 0 0 28px;
+        letter-spacing: -0.05em;
+      }
+      .legal h2 {
+        font-size: 28px;
+        margin: 45px 0 12px;
+      }
+      .legal p,
+      .legal li {
+        line-height: 1.7;
+        color: var(--muted);
+      }
+      .legal a {
+        color: var(--orange);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">RUMBO<span>·</span></a
+      ><button
+        id="menuBtn"
+        class="menu-btn"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        ☰
+      </button>
+      <nav id="menu">
+        <a href="index.html#destinos">Destinos</a
+        ><a href="index.html#experiencias">Experiencias</a
+        ><a href="index.html#favoritos">Favoritos</a
+        ><a class="navbtn" href="contacto.html">Planifica tu viaje ↗</a>
+      </nav>
+    </header>
+    <main class="legal">
+      <p class="tag">INFORMACIÓN LEGAL</p>
+      <h1>Términos y <i>condiciones.</i></h1>
+      <p>Última actualización: 8 de septiembre de 2026.</p>
+      <h2>Objeto</h2>
+      <p>
+        Estas condiciones regulan el acceso y uso de la web Rumbo Viajes. La
+        información publicada tiene carácter inspiracional e informativo para
+        ayudar a planificar viajes.
+      </p>
+      <h2>Uso de la web</h2>
+      <p>
+        Te comprometes a utilizar este sitio de forma lícita y respetuosa. No
+        está permitido interferir en su funcionamiento, intentar acceder a áreas
+        restringidas ni usar sus contenidos con fines ilícitos.
+      </p>
+      <h2>Información de destinos</h2>
+      <p>
+        Las recomendaciones, precios y datos de destinos pueden cambiar. Antes
+        de realizar cualquier reserva, verifica siempre la información
+        actualizada con proveedores, autoridades y agencias correspondientes.
+      </p>
+      <h2>Propiedad intelectual</h2>
+      <p>
+        Los textos, diseño, identidad visual y contenidos de Rumbo Viajes están
+        protegidos por la normativa aplicable. No pueden reproducirse o
+        distribuirse sin autorización previa, salvo los usos permitidos por la
+        ley.
+      </p>
+      <h2>Enlaces externos</h2>
+      <p>
+        La web puede incluir enlaces a páginas de terceros. Rumbo Viajes no
+        controla ni se responsabiliza del contenido, disponibilidad o políticas
+        de dichos sitios.
+      </p>
+      <h2>Responsabilidad</h2>
+      <p>
+        No garantizamos que el sitio esté disponible sin interrupciones ni que
+        toda la información esté libre de errores. En la medida permitida por la
+        ley, Rumbo Viajes no será responsable de daños derivados del uso de esta
+        web.
+      </p>
+      <h2>Contacto</h2>
+      <p>
+        Para cualquier consulta sobre estas condiciones, puedes escribirnos a
+        través de nuestro <a href="contacto.html">formulario de contacto</a>.
+      </p>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">RUMBO<span>·</span></a>
+        <p>
+          Viajar es coleccionar momentos, no cosas. Inspiración para salir con
+          más calma y descubrir más lejos.
+        </p>
+        <a class="footer-contact-cta" href="contacto.html"
+          >Planifica tu viaje <span aria-hidden="true">→</span></a
+        >
+      </div>
+      <nav class="footer-column" aria-label="Explorar Rumbo">
+        <h2>Explora</h2>
+        <a href="index.html#destinos">Destinos</a>
+        <a href="index.html#experiencias">Experiencias</a>
+        <a href="index.html#favoritos">Mis favoritos</a>
+      </nav>
+      <nav class="footer-column" aria-label="Ayuda">
+        <h2>Hablemos</h2>
+        <a href="contacto.html">Contacto</a>
+        <a href="contacto.html">Diseña tu viaje</a>
+      </nav>
+      <nav class="footer-column" aria-label="Información legal">
+        <h2>Información</h2>
+        <a href="politica-privacidad.html">Política de privacidad</a>
+        <a href="terminos-condiciones.html">Términos y condiciones</a>
+        <button id="cookieSettings" class="text-button">
+          Configuración de cookies
+        </button>
+      </nav>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> RUMBO. Todos los derechos reservados.</p>
+        <p>Hecho para viajar sin prisa.</p>
+      </div>
+    </footer>
+    <script>
+      const b = document.querySelector("#menuBtn"),
+        n = document.querySelector("#menu");
+      b.onclick = () => {
+        let o = n.classList.toggle("open");
+        b.setAttribute("aria-expanded", o);
+      };
+      document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
